@@ -107,8 +107,10 @@ export function PaymentFormModal({ tenantId, bookings, customers }: PaymentFormM
             options={[
               { value: 'credit_card', label: 'Credit Card' },
               { value: 'debit_card', label: 'Debit Card' },
-              { value: 'cash', label: 'Cash' },
-              { value: 'digital_wallet', label: 'Digital Wallet' },
+              { value: 'cash', label: 'Tien mat' },
+              { value: 'vnpay', label: 'VNPay' },
+              { value: 'bank_transfer', label: 'Chuyen khoan' },
+              { value: 'digital_wallet', label: 'Vi dien tu' },
               { value: 'gift_card', label: 'Gift Card' },
             ]}
           />

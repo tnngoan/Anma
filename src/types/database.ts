@@ -3,7 +3,7 @@ export type Role = 'owner' | 'manager' | 'masseuse' | 'receptionist' | 'customer
 export type BookingStatus = 'pending' | 'confirmed' | 'checked_in' | 'in_progress' | 'completed' | 'cancelled' | 'no_show';
 export type BookingType = 'online' | 'walk_in' | 'phone';
 export type ShiftStatus = 'scheduled' | 'checked_in' | 'completed' | 'no_show' | 'cancelled';
-export type PaymentMethod = 'credit_card' | 'debit_card' | 'cash' | 'digital_wallet' | 'gift_card' | 'membership' | 'package';
+export type PaymentMethod = 'credit_card' | 'debit_card' | 'cash' | 'digital_wallet' | 'gift_card' | 'membership' | 'package' | 'vnpay' | 'bank_transfer';
 export type PaymentStatus = 'pending' | 'completed' | 'failed' | 'refunded' | 'partially_refunded';
 export type TimeOffStatus = 'pending' | 'approved' | 'denied';
 export type MembershipType = 'subscription' | 'package';
@@ -216,6 +216,7 @@ export interface Payment {
   status: PaymentStatus;
   stripe_payment_id: string | null;
   stripe_refund_id: string | null;
+  vnpay_transaction_id: string | null;
   refund_amount: number;
   refund_reason: string | null;
   notes: string | null;

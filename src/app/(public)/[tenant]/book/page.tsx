@@ -75,6 +75,8 @@ export default async function PublicBookingPage({ params }: BookingPageProps) {
           tenantSlug={slug}
           services={servicesResult.data || []}
           staff={staffResult.data || []}
+          bankQrUrl={(tenant.settings as Record<string, unknown>)?.bank_qr_url as string | undefined}
+          currency={tenant.currency || 'VND'}
         />
       </main>
 
